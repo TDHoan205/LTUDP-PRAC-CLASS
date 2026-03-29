@@ -1,0 +1,508 @@
+{
+  "sheet_url": "https://docs.google.com/spreadsheets/d/1rLg1uFjqOGwsj0cT8Xuj4zWjxMQL4cwhtO3U3MhFmaY/edit?gid=0#gid=0",
+  "csv_url_used": "https://docs.google.com/spreadsheets/d/1rLg1uFjqOGwsj0cT8Xuj4zWjxMQL4cwhtO3U3MhFmaY/export?format=csv&gid=0",
+  "rows_read": 67,
+  "submitted_links": 42,
+  "accessible_links": 42,
+  "accessible_rate_percent": 100.0,
+  "unique_accessible_repos": [
+    "20230118-cell/khocodepython",
+    "20230254-glitch/khocodepython",
+    "20231448-png/bt-p-python",
+    "20231560-ux/PhyThon",
+    "20231672-khiem/btpython",
+    "20231715-creator/baitap",
+    "20231732-byte/B-i-Python",
+    "20231931-NQH/python",
+    "20231934-hub/bt-python",
+    "20231960-beep/python",
+    "Ancdvcdc/python",
+    "Cherrynguyen11/b-i-t-p-luy-n-t-p",
+    "DuongPham05/Khocodebaitap",
+    "Hieuhoclaptrinh/python-study-assistant",
+    "Nguyenvandung20231619/LapTrinhPyThon",
+    "Nguyenvantruong314/baitap3.3",
+    "TDHoan205/LTUDP-PRAC-CLASS",
+    "TaiToieaut/taitap",
+    "Thanhthuy1308/BT-PYTHON",
+    "Tongngoctuyen/baitap3.3",
+    "Tranmanhquan21/Bai_TapPy",
+    "VietDung2005-super/28-3",
+    "VietDung2005-super/L-V-Vi-t-D-ng",
+    "cuonghuhuu/python_cacbuoitrenlop",
+    "dungnv0506-web/BTVN",
+    "hieppham250605-hash/baitap-python",
+    "huulong231005-trom/baitap",
+    "huyhug/baitaptrenlop",
+    "k1lla187/btvn_python_ViAnhTuan",
+    "ngoclinh205/python",
+    "ngotuan16072005-hub/btpython-",
+    "nguyenngochainam05-hue/BaiTapPython",
+    "nongduong0403-create/baitapvn",
+    "ntminh1202/py",
+    "phammyle2105/python",
+    "phandinhthi2k5-cyber/codePython",
+    "tanh15rcb/KH-CDEPYTHON",
+    "tdung141/AI_StudyCode",
+    "tranminhhoa2005/Python",
+    "vancong05/lab",
+    "vduy31000-arch/baitap",
+    "vumanhdungvu2005-boop/Bai_tap_python"
+  ],
+  "contribution_summary": [
+    {
+      "member": "Hieuhoclaptrinh",
+      "commits": 5,
+      "percent": 11.63
+    },
+    {
+      "member": "Nguyenvandung20231619",
+      "commits": 4,
+      "percent": 9.3
+    },
+    {
+      "member": "TDHoan205",
+      "commits": 4,
+      "percent": 9.3
+    },
+    {
+      "member": "20230254-glitch",
+      "commits": 3,
+      "percent": 6.98
+    },
+    {
+      "member": "20231560-ux",
+      "commits": 3,
+      "percent": 6.98
+    },
+    {
+      "member": "20231960-beep",
+      "commits": 3,
+      "percent": 6.98
+    },
+    {
+      "member": "20230118-cell",
+      "commits": 2,
+      "percent": 4.65
+    },
+    {
+      "member": "20231448-png",
+      "commits": 2,
+      "percent": 4.65
+    },
+    {
+      "member": "20231672-khiem",
+      "commits": 2,
+      "percent": 4.65
+    },
+    {
+      "member": "20231931-NQH",
+      "commits": 2,
+      "percent": 4.65
+    },
+    {
+      "member": "20231934-hub",
+      "commits": 2,
+      "percent": 4.65
+    },
+    {
+      "member": "Ancdvcdc",
+      "commits": 2,
+      "percent": 4.65
+    },
+    {
+      "member": "Cherrynguyen11",
+      "commits": 2,
+      "percent": 4.65
+    },
+    {
+      "member": "DuongPham05",
+      "commits": 2,
+      "percent": 4.65
+    },
+    {
+      "member": "Thanhthuy1308",
+      "commits": 2,
+      "percent": 4.65
+    },
+    {
+      "member": "20231715-creator",
+      "commits": 1,
+      "percent": 2.33
+    },
+    {
+      "member": "20231732-byte",
+      "commits": 1,
+      "percent": 2.33
+    },
+    {
+      "member": "Nguyenvantruong314",
+      "commits": 1,
+      "percent": 2.33
+    }
+  ],
+  "warnings": [
+    "[TaiToieaut/taitap] API error 403: {\"message\":\"API rate limit exceeded for 116.96.44.31. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)\",\"documentation_url\":\"ht",
+    "[Tongngoctuyen/baitap3.3] API error 403: {\"message\":\"API rate limit exceeded for 116.96.44.31. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)\",\"documentation_url\":\"ht",
+    "[VietDung2005-super/28-3] API error 403: {\"message\":\"API rate limit exceeded for 116.96.44.31. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)\",\"documentation_url\":\"ht",
+    "[hieppham250605-hash/baitap-python] API error 403: {\"message\":\"API rate limit exceeded for 116.96.44.31. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)\",\"documentation_url\":\"ht",
+    "[cuonghuhuu/python_cacbuoitrenlop] API error 403: {\"message\":\"API rate limit exceeded for 116.96.44.31. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)\",\"documentation_url\":\"ht",
+    "[Tranmanhquan21/Bai_TapPy] API error 403: {\"message\":\"API rate limit exceeded for 116.96.44.31. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)\",\"documentation_url\":\"ht",
+    "[huulong231005-trom/baitap] API error 403: {\"message\":\"API rate limit exceeded for 116.96.44.31. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)\",\"documentation_url\":\"ht",
+    "[dungnv0506-web/BTVN] API error 403: {\"message\":\"API rate limit exceeded for 116.96.44.31. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)\",\"documentation_url\":\"ht",
+    "[VietDung2005-super/L-V-Vi-t-D-ng] API error 403: {\"message\":\"API rate limit exceeded for 116.96.44.31. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)\",\"documentation_url\":\"ht",
+    "[ngoclinh205/python] API error 403: {\"message\":\"API rate limit exceeded for 116.96.44.31. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)\",\"documentation_url\":\"ht",
+    "[huyhug/baitaptrenlop] API error 403: {\"message\":\"API rate limit exceeded for 116.96.44.31. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)\",\"documentation_url\":\"ht",
+    "[k1lla187/btvn_python_ViAnhTuan] API error 403: {\"message\":\"API rate limit exceeded for 116.96.44.31. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)\",\"documentation_url\":\"ht",
+    "[nguyenngochainam05-hue/BaiTapPython] API error 403: {\"message\":\"API rate limit exceeded for 116.96.44.31. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)\",\"documentation_url\":\"ht",
+    "[ngotuan16072005-hub/btpython-] API error 403: {\"message\":\"API rate limit exceeded for 116.96.44.31. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)\",\"documentation_url\":\"ht",
+    "[nongduong0403-create/baitapvn] API error 403: {\"message\":\"API rate limit exceeded for 116.96.44.31. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)\",\"documentation_url\":\"ht",
+    "[ntminh1202/py] API error 403: {\"message\":\"API rate limit exceeded for 116.96.44.31. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)\",\"documentation_url\":\"ht",
+    "[phammyle2105/python] API error 403: {\"message\":\"API rate limit exceeded for 116.96.44.31. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)\",\"documentation_url\":\"ht",
+    "[vancong05/lab] API error 403: {\"message\":\"API rate limit exceeded for 116.96.44.31. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)\",\"documentation_url\":\"ht",
+    "[tanh15rcb/KH-CDEPYTHON] API error 403: {\"message\":\"API rate limit exceeded for 116.96.44.31. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)\",\"documentation_url\":\"ht",
+    "[vduy31000-arch/baitap] API error 403: {\"message\":\"API rate limit exceeded for 116.96.44.31. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)\",\"documentation_url\":\"ht",
+    "[phandinhthi2k5-cyber/codePython] API error 403: {\"message\":\"API rate limit exceeded for 116.96.44.31. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)\",\"documentation_url\":\"ht",
+    "[tdung141/AI_StudyCode] API error 403: {\"message\":\"API rate limit exceeded for 116.96.44.31. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)\",\"documentation_url\":\"ht",
+    "[tranminhhoa2005/Python] API error 403: {\"message\":\"API rate limit exceeded for 116.96.44.31. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)\",\"documentation_url\":\"ht",
+    "[vumanhdungvu2005-boop/Bai_tap_python] API error 403: {\"message\":\"API rate limit exceeded for 116.96.44.31. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)\",\"documentation_url\":\"ht"
+  ],
+  "submission_details": [
+    {
+      "row_number": 2,
+      "repo_url": "https://github.com/Ancdvcdc/python",
+      "repo_full_name": "Ancdvcdc/python",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 3,
+      "repo_url": "https://github.com/20231960-beep/python",
+      "repo_full_name": "20231960-beep/python",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 4,
+      "repo_url": "https://github.com/tdung141/AI_StudyCode",
+      "repo_full_name": "tdung141/AI_StudyCode",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 5,
+      "repo_url": "https://github.com/20231732-byte/B-i-Python",
+      "repo_full_name": "20231732-byte/B-i-Python",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 6,
+      "repo_url": "https://github.com/Hieuhoclaptrinh/python-study-assistant",
+      "repo_full_name": "Hieuhoclaptrinh/python-study-assistant",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 7,
+      "repo_url": "https://github.com/Thanhthuy1308/BT-PYTHON",
+      "repo_full_name": "Thanhthuy1308/BT-PYTHON",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 8,
+      "repo_url": "https://github.com/20231934-hub/bt-python",
+      "repo_full_name": "20231934-hub/bt-python",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 9,
+      "repo_url": "https://github.com/tranminhhoa2005/Python",
+      "repo_full_name": "tranminhhoa2005/Python",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 10,
+      "repo_url": "https://github.com/Nguyenvandung20231619/LapTrinhPyThon",
+      "repo_full_name": "Nguyenvandung20231619/LapTrinhPyThon",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 12,
+      "repo_url": "https://github.com/20231560-ux/PhyThon",
+      "repo_full_name": "20231560-ux/PhyThon",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 14,
+      "repo_url": "https://github.com/phammyle2105/python",
+      "repo_full_name": "phammyle2105/python",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 15,
+      "repo_url": "https://github.com/huulong231005-trom/baitap",
+      "repo_full_name": "huulong231005-trom/baitap",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 16,
+      "repo_url": "https://github.com/20231715-creator/baitap",
+      "repo_full_name": "20231715-creator/baitap",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 17,
+      "repo_url": "https://github.com/20231672-khiem/btpython",
+      "repo_full_name": "20231672-khiem/btpython",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 18,
+      "repo_url": "https://github.com/TDHoan205/LTUDP-PRAC-CLASS",
+      "repo_full_name": "TDHoan205/LTUDP-PRAC-CLASS",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 20,
+      "repo_url": "https://github.com/Tranmanhquan21/Bai_TapPy.git",
+      "repo_full_name": "Tranmanhquan21/Bai_TapPy",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 21,
+      "repo_url": "https://github.com/k1lla187/btvn_python_ViAnhTuan",
+      "repo_full_name": "k1lla187/btvn_python_ViAnhTuan",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 22,
+      "repo_url": "https://github.com/Cherrynguyen11/b-i-t-p-luy-n-t-p.git",
+      "repo_full_name": "Cherrynguyen11/b-i-t-p-luy-n-t-p",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 23,
+      "repo_url": "https://github.com/dungnv0506-web/BTVN.git",
+      "repo_full_name": "dungnv0506-web/BTVN",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 24,
+      "repo_url": "https://github.com/cuonghuhuu/python_cacbuoitrenlop",
+      "repo_full_name": "cuonghuhuu/python_cacbuoitrenlop",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 26,
+      "repo_url": "https://github.com/ngoclinh205/python",
+      "repo_full_name": "ngoclinh205/python",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 28,
+      "repo_url": "https://github.com/20230254-glitch/khocodepython",
+      "repo_full_name": "20230254-glitch/khocodepython",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 29,
+      "repo_url": "https://github.com/phandinhthi2k5-cyber/codePython",
+      "repo_full_name": "phandinhthi2k5-cyber/codePython",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 30,
+      "repo_url": "https://github.com/vumanhdungvu2005-boop/Bai_tap_python",
+      "repo_full_name": "vumanhdungvu2005-boop/Bai_tap_python",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 31,
+      "repo_url": "https://github.com/DuongPham05/Khocodebaitap",
+      "repo_full_name": "DuongPham05/Khocodebaitap",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 32,
+      "repo_url": "https://github.com/nguyenngochainam05-hue/BaiTapPython/upload",
+      "repo_full_name": "nguyenngochainam05-hue/BaiTapPython",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 33,
+      "repo_url": "https://github.com/VietDung2005-super/28-3",
+      "repo_full_name": "VietDung2005-super/28-3",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 33,
+      "repo_url": "https://github.com/VietDung2005-super/L-V-Vi-t-D-ng",
+      "repo_full_name": "VietDung2005-super/L-V-Vi-t-D-ng",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 35,
+      "repo_url": "https://github.com/huyhug/baitaptrenlop/blob/main/baitap.py",
+      "repo_full_name": "huyhug/baitaptrenlop",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 36,
+      "repo_url": "https://github.com/TaiToieaut/taitap",
+      "repo_full_name": "TaiToieaut/taitap",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 38,
+      "repo_url": "https://github.com/tanh15rcb/KH-CDEPYTHON",
+      "repo_full_name": "tanh15rcb/KH-CDEPYTHON",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 39,
+      "repo_url": "https://github.com/ntminh1202/py",
+      "repo_full_name": "ntminh1202/py",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 40,
+      "repo_url": "https://github.com/20230118-cell/khocodepython",
+      "repo_full_name": "20230118-cell/khocodepython",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 41,
+      "repo_url": "https://github.com/Tongngoctuyen/baitap3.3",
+      "repo_full_name": "Tongngoctuyen/baitap3.3",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 47,
+      "repo_url": "https://github.com/vduy31000-arch/baitap",
+      "repo_full_name": "vduy31000-arch/baitap",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 48,
+      "repo_url": "https://github.com/Nguyenvantruong314/baitap3.3",
+      "repo_full_name": "Nguyenvantruong314/baitap3.3",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 54,
+      "repo_url": "https://github.com/vancong05/lab",
+      "repo_full_name": "vancong05/lab",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 55,
+      "repo_url": "https://github.com/nongduong0403-create/baitapvn",
+      "repo_full_name": "nongduong0403-create/baitapvn",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 56,
+      "repo_url": "https://github.com/20231448-png/bt-p-python.git",
+      "repo_full_name": "20231448-png/bt-p-python",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 57,
+      "repo_url": "https://github.com/ngotuan16072005-hub/btpython-.git",
+      "repo_full_name": "ngotuan16072005-hub/btpython-",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 61,
+      "repo_url": "https://github.com/20231931-NQH/python",
+      "repo_full_name": "20231931-NQH/python",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "row_number": 62,
+      "repo_url": "https://github.com/hieppham250605-hash/baitap-python",
+      "repo_full_name": "hieppham250605-hash/baitap-python",
+      "accessible": true,
+      "status_code": 200,
+      "error": ""
+    }
+  ]
+}
