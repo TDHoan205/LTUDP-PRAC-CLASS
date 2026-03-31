@@ -1,0 +1,150 @@
+:root {
+  --bg: #eef5ff;
+  --fg: #16344f;
+  --card: #ffffff;
+  --soft: #dbe9ff;
+  --accent: #2f86d6;
+}
+
+html[data-theme='dark'] {
+  --bg: #071b2e;
+  --fg: #e7f2ff;
+  --card: #102a43;
+  --soft: #163854;
+  --accent: #63a8ff;
+}
+
+body {
+  background: radial-gradient(circle at 10% 10%, #d5e7ff 0%, var(--bg) 45%, var(--bg) 100%);
+  color: var(--fg);
+  min-height: 100vh;
+}
+
+html[data-theme='dark'] body {
+  background: radial-gradient(circle at 15% 10%, #12385f 0%, var(--bg) 50%, var(--bg) 100%);
+}
+
+.card-glass {
+  background: var(--card);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(18, 50, 77, 0.12);
+  border: 1px solid rgba(47, 134, 214, 0.12);
+}
+
+.stat-card {
+  background: linear-gradient(140deg, var(--soft), var(--card));
+  border-radius: 14px;
+  padding: 14px;
+  border: 1px solid rgba(47, 134, 214, 0.15);
+}
+
+.stat-card.success { border-left: 6px solid #1a7f37; }
+.stat-card.danger { border-left: 6px solid #b42318; }
+.stat-card.warning { border-left: 6px solid #b26a00; }
+
+.stat-title { font-size: 0.9rem; opacity: 0.9; }
+.stat-value { font-size: 1.75rem; font-weight: 700; }
+
+.table-wrap { max-height: 460px; overflow: auto; }
+
+.chart-box {
+  width: 100%;
+  height: 180px;
+  max-height: 180px;
+}
+
+.chart-box-sm {
+  height: 180px;
+  max-height: 180px;
+}
+
+.chart-box-xs {
+  height: 140px;
+  max-height: 140px;
+}
+
+.chart-box canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.status-pill {
+  font-size: 0.75rem;
+  padding: 0.3rem 0.55rem;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.status-submitted { background: #d1fae5; color: #065f46; }
+.status-missing { background: #fee2e2; color: #7f1d1d; }
+.status-late { background: #fef3c7; color: #7c2d12; }
+
+.detail-box {
+  min-height: 170px;
+  max-height: 260px;
+  overflow: auto;
+  background: var(--soft);
+  border-radius: 12px;
+  padding: 10px;
+  white-space: pre-line;
+}
+
+.log-box {
+  min-height: 120px;
+  max-height: 180px;
+  overflow: auto;
+  background: #00152a;
+  color: #d9ecff;
+  border-radius: 12px;
+  padding: 8px;
+  margin: 0;
+}
+
+.ai-box {
+  min-height: 110px;
+  max-height: 180px;
+  overflow: auto;
+  background: #062238;
+  color: #d6ebff;
+  border-radius: 12px;
+  padding: 8px;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+#studentTable tbody tr.active-row {
+  background: rgba(47, 134, 214, 0.12);
+}
+
+.compare-pane {
+  border: 1px solid rgba(47, 134, 214, 0.25);
+  border-radius: 10px;
+  background: #0a1f34;
+  min-height: 320px;
+  max-height: 460px;
+  overflow: auto;
+}
+
+.compare-pane pre {
+  color: #e5f1ff;
+  margin: 0;
+  padding: 12px;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.hl {
+  background: #ffe066;
+  color: #1a1a1a;
+}
+
+.loading-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 11, 22, 0.72);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
