@@ -1,16 +1,8 @@
 """
 Tool danh gia trung lap code giua 2 san pham Python.
 
-Yeu cau:
-- Nhap vao 2 thu muc chua source code Python.
-- Danh gia % trung lap code tong quan.
-- Danh gia muc do trung lap cach giai quyet/cach code (dua tren cau truc AST).
-
 Cach dung:
-    python bainangcao.py <thu_muc_sp1> <thu_muc_sp2>
-
-Vi du:
-    python bainangcao.py D:/sanphamA D:/sanphamB
+    python bainangcao.py "thu_muc_sp1" "thu_muc_sp2"
 """
 
 from __future__ import annotations
