@@ -1,0 +1,5 @@
+filePath ="test.txt"
+file = open (filePath, "r")
+text= file.read()
+print(text)
+file.close()

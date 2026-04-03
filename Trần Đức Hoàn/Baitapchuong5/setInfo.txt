@@ -1,0 +1,6 @@
+Ten: hoan
+Tuoi: 20
+Email: hoan
+Skype: hhh
+Dia chi: hhh
+Noi lam viec: 10
