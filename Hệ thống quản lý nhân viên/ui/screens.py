@@ -1,16 +1,3 @@
-# =============================================================================
-# Module: screens.py
-# Mo ta: Cac man hinh san co
-# =============================================================================
-"""
-Cac man hinh san co:
-- WelcomeScreen: Man hinh khoi dong
-- Dashboard: Bang dieu khien chinh
-- HelpScreen: Man hinh tro giup
-- LoadingScreen: Man hinh loading
-- AboutScreen: Man hinh gioi thieu
-"""
-
 import sys
 import os
 import time
@@ -25,18 +12,8 @@ from .colors import (
     set_theme
 )
 
-
-# ── Welcome Screen ─────────────────────────────────────────────────────────────
-
 class WelcomeScreen:
-    """
-    Man hinh chao mung khi khoi dong.
-
-    Usage:
-        ws = WelcomeScreen()
-        ws.show()
-    """
-
+    
     def __init__(self, app_name=None, version="1.0", company="ABC Corp"):
         self.app_name = app_name or "HE THONG QUAN LY NHAN VIEN"
         self.version = version
@@ -45,12 +22,10 @@ class WelcomeScreen:
         self.show_loading = True
 
     def _clear_screen(self):
-        """Xoa man hinh."""
-        os.system('cls' if os.name == 'nt' else 'clear')
+                os.system('cls' if os.name == 'nt' else 'clear')
 
     def _print_ascii_box(self, lines, width=70):
-        """In khung ASCII art."""
-        border = "═" * width
+                border = "═" * width
         print(f"\n  {bright_cyan('╔' + border + '╗')}")
         for line in lines:
             padding = width - len(line) + 2
@@ -58,16 +33,14 @@ class WelcomeScreen:
         print(f"  {bright_cyan('╚' + border + '╝')}\n")
 
     def _print_box(self, lines, width=70):
-        """In khung don gian."""
-        print(f"\n  {bright_cyan('┌' + '─' * width + '┐')}")
+                print(f"\n  {bright_cyan('┌' + '─' * width + '┐')}")
         for line in lines:
             padding = width - len(line) + 2
             print(f"  {bright_cyan('│')}{_BOLD}{bright_white(line.center(width))}{_RESET}{bright_cyan('│')}")
         print(f"  {bright_cyan('└' + '─' * width + '┘')}\n")
 
     def _get_ascii_art(self):
-        """Lay ASCII art."""
-        return [
+                return [
             "",
             "   ██████╗ ██████╗ ███╗   ██╗███████╗ ██████╗ ██╗     ███████╗",
             "  ██╔════╝██╔═══██╗████╗  ██║██╔════╝██╔═══██╗██║     ██╔════╝",
@@ -79,14 +52,11 @@ class WelcomeScreen:
         ]
 
     def show(self, animated=True):
-        """Hien thi man hinh chao."""
-        self._clear_screen()
+                self._clear_screen()
 
-        # ASCII Art
         ascii_art = self._get_ascii_art()
         self._print_ascii_box(ascii_art, width=65)
 
-        # Thong tin ung dung
         print(f"  {bright_cyan('─' * 65)}")
         print(f"  {bright_green('  HE THONG QUAN LY NHAN VIEN')} {bright_white(f'Version {self.version}')}")
         print(f"  {bright_cyan('─' * 65)}")
@@ -97,13 +67,11 @@ class WelcomeScreen:
         print(f"  {dim('  Ngay:')} {bright_white(datetime.datetime.now().strftime('%d/%m/%Y'))}")
         print()
 
-        # Loading bar
         if self.show_loading and animated:
             self._print_loading_bar()
 
         print()
 
-        # Thong tin dang nhap
         if _ENABLE_COLORS:
             print(f"  {bright_yellow('  [!]')} {dim('He thong san sang. Vui long dang nhap de tiep tuc.')}")
         else:
@@ -112,8 +80,7 @@ class WelcomeScreen:
         print()
 
     def _print_loading_bar(self):
-        """In thanh loading."""
-        steps = 20
+                steps = 20
         if _ENABLE_COLORS:
             for i in range(steps + 1):
                 filled = "█" * i
@@ -133,26 +100,15 @@ class WelcomeScreen:
                 time.sleep(0.05)
             sys.stdout.write("\n")
 
-
-# ── Dashboard ─────────────────────────────────────────────────────────────────
-
 class Dashboard:
-    """
-    Bang dieu khien chinh.
-
-    Usage:
-        dashboard = Dashboard(company)
-        dashboard.show()
-    """
-
+    
     def __init__(self, company):
         self.company = company
         self.stats = {}
         self.refresh()
 
     def refresh(self):
-        """Cap nhat du lieu thong ke."""
-        self.stats = {
+                self.stats = {
             "total": self.company.employee_count,
             "manager": len(self.company.filter_by_role("manager")),
             "developer": len(self.company.filter_by_role("developer")),
@@ -167,12 +123,10 @@ class Dashboard:
             self.stats["avg_salary"] = self.stats["total_salary"] / self.stats["total"]
 
     def _format_currency(self, amount):
-        """Format tien te."""
-        return f"{amount:,.0f} VNĐ"
+                return f"{amount:,.0f} VNĐ"
 
     def show(self):
-        """Hien thi dashboard."""
-        self.refresh()
+                self.refresh()
 
         print()
         print(bright_cyan("╔" + "═" * 60 + "╗"))
@@ -180,7 +134,6 @@ class Dashboard:
         print(f"{bright_cyan('║')}{_BOLD}{bright_white(title.center(60))}{_RESET}{bright_cyan('║')}")
         print(bright_cyan("╠" + "═" * 60 + "╣"))
 
-        # Row 1: Tong quan
         vc = bright_cyan
         vg = bright_green
         vy = bright_yellow
@@ -200,7 +153,6 @@ class Dashboard:
         btm = vc('└─────────────────┘')
         print(f"{vc('║')}  {btm}  {btm}  {btm}")
 
-        # Row 2: Phan bo nhan vien
         print(f"{vc('║')}  {bold('PHAN BO NHAN VIEN')}")
         print(f"{vc('║')}  {'─' * 58}")
         print(f"{vc('║')}  {box}  {box}  {box}")
@@ -211,7 +163,6 @@ class Dashboard:
         print(f"{vc('║')}  {vc('│')} {mgr_str}             {vc('│')}  {vc('│')} {dev_str}            {vc('│')}  {vc('│')} {int_str}             {vc('│')}")
         print(f"{vc('║')}  {btm}  {btm}  {btm}")
 
-        # Row 3: Hieu suat
         print(f"{vc('║')}  {bold('HIEU SUAT')}")
         print(f"{vc('║')}  {'─' * 58}")
         print(f"{vc('║')}  {box}  {box}  {box}")
@@ -222,7 +173,6 @@ class Dashboard:
         print(f"{vc('║')}  {vc('│')} {exc_str}             {vc('│')}  {vc('│')} {und_str}            {vc('│')}  {vc('│')} {avg_sal} {vc('│')}")
         print(f"{vc('║')}  {btm}  {btm}  {btm}")
 
-        # Footer
         now = datetime.datetime.now()
         time_str = now.strftime('%d/%m/%Y - %H:%M:%S')
         footer = f" Cap nhat: {time_str} "
@@ -231,47 +181,32 @@ class Dashboard:
 
         print()
 
-
-# ── Help Screen ────────────────────────────────────────────────────────────────
-
 class HelpScreen:
-    """
-    Man hinh tro giup.
-
-    Usage:
-        help_screen = HelpScreen()
-        help_screen.show()
-    """
-
+    
     def __init__(self):
         self.title = "HUONG DAN SU DUNG"
         self.sections = []
 
     def add_section(self, title, items):
-        """Them phan."""
-        self.sections.append({"title": title, "items": items})
+                self.sections.append({"title": title, "items": items})
 
     def _clear_screen(self):
-        """Xoa man hinh."""
-        os.system('cls' if os.name == 'nt' else 'clear')
+                os.system('cls' if os.name == 'nt' else 'clear')
 
     def show(self):
-        """Hien thi man hinh tro giup."""
-        self._clear_screen()
+                self._clear_screen()
 
         print()
         print(bright_cyan("╔" + "═" * 60 + "╗"))
         print(f"{bright_cyan('║')}{_BOLD}{bright_white('  HUONG DAN SU DUNG HE THONG'.center(58))}{_RESET}{bright_cyan('║')}")
         print(bright_cyan("╠" + "═" * 60 + "╣"))
 
-        # Gioi thieu
         print(f"{bright_cyan('║')}  {bold('GIOI THIEU')}")
         print(f"{bright_cyan('║')}  {dim('He thong quan ly nhan su (Employee Management System)')}")
         print(f"{bright_cyan('║')}  {dim('Cho phep them, sua, xoa, tim kiem nhan vien.')}")
         print(f"{bright_cyan('║')}  {dim('Tinh luong, quan ly du an, danh gia hieu suat.')}")
         print(bright_cyan("║" + " " * 60 + "║"))
 
-        # Huong dan nhan lieu
         print(f"{bright_cyan('║')}  {bold('NHAP LIEU')}")
         print(f"{bright_cyan('║')}  {bright_green('  [*]')} {dim('Truong bat buoc phai nhap (co dau *)')}")
         print(f"{bright_cyan('║')}  {bright_blue('  [Gia tri trong ()]')} {dim('Gia tri mac dinh - nhan Enter de giu nguyen')}")
@@ -279,7 +214,6 @@ class HelpScreen:
         print(f"{bright_cyan('║')}  {bright_red('  [X]')} {dim('Loi - vui long nhap lai')}")
         print(bright_cyan("║" + " " * 60 + "║"))
 
-        # Phim tat
         print(f"{bright_cyan('║')}  {bold('PHIM TAT')}")
         print(f"{bright_cyan('║')}  {bright_cyan('  1')} - {dim('Them nhan vien')}                    {bright_cyan('  2')} - {dim('Hien thi danh sach')}")
         print(f"{bright_cyan('║')}  {bright_cyan('  3')} - {dim('Tim kiem')}                      {bright_cyan('  4')} - {dim('Quan ly luong')}")
@@ -288,20 +222,17 @@ class HelpScreen:
         print(f"{bright_cyan('║')}  {bright_red('  9')} - {dim('Thoat chuong trinh')}")
         print(bright_cyan("║" + " " * 60 + "║"))
 
-        # Chuong trinh con
         print(f"{bright_cyan('║')}  {bold('CHUONG TRINH CON')}")
         print(f"{bright_cyan('║')}  {bright_cyan('  a')} - {dim('Chuc nang A')}                    {bright_cyan('  b')} - {dim('Chuc nang B')}")
         print(f"{bright_cyan('║')}  {bright_cyan('  c')} - {dim('Chuc nang C')}                  {bright_cyan('  0')} - {dim('Quay lai menu chinh')}")
         print(bright_cyan("║" + " " * 60 + "║"))
 
-        # Ma tru
         print(f"{bright_cyan('║')}  {bold('MA TRU NHAN VIEN')}")
         print(f"{bright_cyan('║')}  {bright_blue('  MGR')} - {dim('Quan ly (Manager)')}")
         print(f"{bright_cyan('║')}  {bright_green('  DEV')} - {dim('Lap trinh vien (Developer)')}")
         print(f"{bright_cyan('║')}  {bright_magenta('  INT')} - {dim('Thuc tap sinh (Intern)')}")
         print(bright_cyan("║" + " " * 60 + "║"))
 
-        # Thong tin them
         print(f"{bright_cyan('║')}  {bold('THONG TIN THEM')}")
         print(f"{bright_cyan('║')}  {dim('  - Tuoi: 18-65 nam')}")
         print(f"{bright_cyan('║')}  {dim('  - So dien thoai: 10-11 so, bat dau bang 0')}")
@@ -309,23 +240,12 @@ class HelpScreen:
         print(f"{bright_cyan('║')}  {dim('  - Diem hieu suat: 0.0-10.0')}")
         print(bright_cyan("║" + " " * 60 + "║"))
 
-        # Footer
         print(bright_cyan("╚" + "═" * 60 + "╝"))
         print(f"  {dim('Nhan Enter de quay lai...')}")
         input()
 
-
-# ── About Screen ─────────────────────────────────────────────────────────────
-
 class AboutScreen:
-    """
-    Man hinh gioi thieu.
-
-    Usage:
-        about = AboutScreen()
-        about.show()
-    """
-
+    
     def __init__(self):
         self.app_name = "He Thong Quan Ly Nhan Vien"
         self.version = "1.0"
@@ -340,12 +260,10 @@ class AboutScreen:
         ]
 
     def _clear_screen(self):
-        """Xoa man hinh."""
-        os.system('cls' if os.name == 'nt' else 'clear')
+                os.system('cls' if os.name == 'nt' else 'clear')
 
     def show(self):
-        """Hien thi man hinh gioi thieu."""
-        self._clear_screen()
+                self._clear_screen()
 
         print()
         print(bright_cyan("╔" + "═" * 60 + "╗"))
@@ -385,18 +303,8 @@ class AboutScreen:
         print(f"  {dim('Nhan Enter de quay lai...')}")
         input()
 
-
-# ── Loading Screen ───────────────────────────────────────────────────────────
-
 class LoadingScreen:
-    """
-    Man hinh loading.
-
-    Usage:
-        loader = LoadingScreen("Dang tai du lieu...")
-        loader.show()
-    """
-
+    
     def __init__(self, message="Dang xu ly..."):
         self.message = message
         self.duration = 2
@@ -416,13 +324,11 @@ class LoadingScreen:
         ]
 
     def _clear_line(self):
-        """Xoa dong hien tai."""
-        sys.stdout.write("\033[2K\r")
+                sys.stdout.write("\033[2K\r")
         sys.stdout.flush()
 
     def show(self):
-        """Hien thi loading animation."""
-        steps = 20
+                steps = 20
         if _ENABLE_COLORS:
             for i in range(steps + 1):
                 filled = "█" * i
@@ -442,27 +348,15 @@ class LoadingScreen:
                 time.sleep(0.05)
             sys.stdout.write("\n")
 
-
-# ── Spinner ──────────────────────────────────────────────────────────────────
-
 class Spinner:
-    """
-    Spinner animation.
-
-    Usage:
-        with Spinner("Dang xu ly..."):
-            # code can xu ly
-            pass
-    """
-
+    
     def __init__(self, message="Dang xu ly..."):
         self.message = message
         self.frames = ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"]
         self.running = False
 
     def __enter__(self):
-        """Bat dau spinner."""
-        self.running = True
+                self.running = True
         import threading
         self.thread = threading.Thread(target=self._spin)
         self.thread.daemon = True
@@ -470,16 +364,14 @@ class Spinner:
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        """Dung spinner."""
-        self.running = False
+                self.running = False
         if hasattr(self, 'thread'):
             self.thread.join(timeout=0.5)
         self._clear_line()
         print()
 
     def _spin(self):
-        """Chay animation."""
-        index = 0
+                index = 0
         while self.running:
             frame = self.frames[index % len(self.frames)]
             if _ENABLE_COLORS:
@@ -491,22 +383,11 @@ class Spinner:
             time.sleep(0.1)
 
     def _clear_line(self):
-        """Xoa dong."""
-        sys.stdout.write("\033[2K\r")
+                sys.stdout.write("\033[2K\r")
         sys.stdout.flush()
 
-
-# ── Exit Screen ──────────────────────────────────────────────────────────────
-
 class ExitScreen:
-    """
-    Man hinh thoat.
-
-    Usage:
-        exit_screen = ExitScreen()
-        exit_screen.show()
-    """
-
+    
     def __init__(self):
         self.goodbye_messages = [
             "Hen gap lai!",
@@ -516,12 +397,10 @@ class ExitScreen:
         ]
 
     def _clear_screen(self):
-        """Xoa man hinh."""
-        os.system('cls' if os.name == 'nt' else 'clear')
+                os.system('cls' if os.name == 'nt' else 'clear')
 
     def show(self):
-        """Hien thi man hinh thoat."""
-        self._clear_screen()
+                self._clear_screen()
 
         import random
         msg = random.choice(self.goodbye_messages)
@@ -540,7 +419,6 @@ class ExitScreen:
         print()
         print(f"  {dim('He thong se dong sau:')}")
 
-        # Countdown
         if _ENABLE_COLORS:
             for i in range(3, 0, -1):
                 sys.stdout.write(f"\r  {bright_yellow(str(i))}...")
@@ -555,17 +433,8 @@ class ExitScreen:
         print(f"  {bright_red('[!]')} {dim('Hen gap lai!')}")
         print()
 
-
-# ── Quick Stats ──────────────────────────────────────────────────────────────
-
 def show_quick_stats(company):
-    """
-    Hien thi thong ke nhanh.
-
-    Args:
-        company: Object Company
-    """
-    print()
+        print()
     print(bright_cyan("  ╔════════════════════════════════════════════╗"))
     print(bright_cyan("  ║") + f"  {bold('THONG KE NHANH').center(42)}" + bright_cyan("║"))
     print(bright_cyan("  ╠════════════════════════════════════════════╣"))
@@ -576,8 +445,7 @@ def show_quick_stats(company):
     intern = len(company.filter_by_role("intern"))
     salary = company.total_company_salary()
 
-    fmt = lambda x: f"{x:,.0f} VNĐ"
-
+    fmt = lambda x: 
     print(bright_cyan("  ║") + f"  {dim('Tong nhan vien:')} {bright_white(str(total)):>28}" + bright_cyan("║"))
     print(bright_cyan("  ║") + f"  {dim('  - Manager:')} {bright_blue(str(mgr)):>33}" + bright_cyan("║"))
     print(bright_cyan("  ║") + f"  {dim('  - Developer:')} {bright_green(str(dev)):>32}" + bright_cyan("║"))

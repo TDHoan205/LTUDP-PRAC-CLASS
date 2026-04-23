@@ -1,19 +1,19 @@
-# =============================================================================
-# Module: payroll.py
-# Mô tả: Module xử lý nghiệp vụ tính lương và thống kê lương
-# =============================================================================
-# GIẢI THÍCH CHO NGƯỜI MỚI:
-#
-# Module này chứa các HÀM (không phải class) xử lý nghiệp vụ lương:
-#   - Tính lương chi tiết cho từng nhân viên
-#   - Tạo bảng lương tổng hợp
-#   - Thống kê lương theo nhiều tiêu chí
-#
-# TẠI SAO DÙNG HÀM RIÊNG MÀ KHÔNG ĐẶT TRONG CLASS COMPANY?
-#   - Tách riêng logic tính lương → dễ bảo trì, mở rộng
-#   - Tuân thủ nguyên tắc Single Responsibility (mỗi module 1 nhiệm vụ)
-#   - Company quản lý nhân viên, Payroll xử lý lương
-# =============================================================================
+                                                                               
+                    
+                                                            
+                                                                               
+                           
+ 
+                                                                   
+                                            
+                             
+                                        
+ 
+                                                          
+                                                       
+                                                                       
+                                                    
+                                                                               
 
 from utils.formatters import Formatter
 from models.manager import Manager
@@ -22,17 +22,17 @@ from models.intern import Intern
 
 
 def calculate_employee_salary_detail(employee):
-    """
-    Tính và hiển thị chi tiết lương của nhân viên.
-    
-    Hiển thị:
-        - Lương cơ bản
-        - Các khoản phụ cấp/bonus theo chức vụ
-        - Tổng lương
-    
-    Args:
-        employee: Object nhân viên
-    """
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+       
     fmt = Formatter.format_currency
     
     Formatter.print_sub_header(
@@ -42,7 +42,7 @@ def calculate_employee_salary_detail(employee):
     Formatter.print_field("Chức vụ", employee.get_role())
     Formatter.print_field("Lương cơ bản", fmt(employee.base_salary))
     
-    # Hiển thị chi tiết theo từng loại nhân viên
+                                                
     if isinstance(employee, Manager):
         team_bonus = employee.team_size * Manager.BONUS_PER_MEMBER
         Formatter.print_field("Phụ cấp quản lý", fmt(employee.management_bonus))
@@ -70,12 +70,12 @@ def calculate_employee_salary_detail(employee):
 
 
 def print_payroll_summary(company):
-    """
-    In bảng lương tổng hợp toàn công ty.
-    
-    Args:
-        company: Object Company
-    """
+\
+\
+\
+\
+\
+       
     if not company.has_employees():
         Formatter.print_warning("Chưa có dữ liệu nhân viên")
         return
@@ -84,7 +84,7 @@ def print_payroll_summary(company):
     
     fmt = Formatter.format_currency
     
-    # In header bảng
+                    
     print(f"  {'STT':<4} {'MÃ NV':<10} {'HỌ TÊN':<25} "
           f"{'CHỨC VỤ':<12} {'TỔNG LƯƠNG':>18}")
     Formatter.print_separator()
@@ -106,12 +106,12 @@ def print_payroll_summary(company):
 
 
 def print_salary_statistics(company):
-    """
-    In thống kê lương chi tiết.
-    
-    Args:
-        company: Object Company
-    """
+\
+\
+\
+\
+\
+       
     if not company.has_employees():
         Formatter.print_warning("Chưa có dữ liệu nhân viên")
         return
@@ -120,20 +120,20 @@ def print_salary_statistics(company):
     
     Formatter.print_header("THỐNG KÊ LƯƠNG")
     
-    # ── 1. Số lượng theo loại ───────────────────────────────────────────
+                                                                          
     counts = company.count_by_role()
     Formatter.print_sub_header("SỐ LƯỢNG THEO CHỨC VỤ")
     for role, count in counts.items():
         Formatter.print_field(role, f"{count} người")
     Formatter.print_field("Tổng cộng", f"{company.employee_count} người")
     
-    # ── 2. Tổng lương theo phòng ban ────────────────────────────────────
+                                                                          
     dept_salaries = company.total_salary_by_department()
     Formatter.print_sub_header("TỔNG LƯƠNG THEO PHÒNG BAN")
     for dept, total in sorted(dept_salaries.items()):
         Formatter.print_field(dept, fmt(total))
     
-    # ── 3. Tổng lương công ty ───────────────────────────────────────────
+                                                                          
     Formatter.print_sub_header("TỔNG HỢP")
     Formatter.print_field("Tổng lương công ty", fmt(company.total_company_salary()))
     

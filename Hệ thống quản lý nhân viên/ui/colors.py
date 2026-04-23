@@ -1,29 +1,16 @@
-# =============================================================================
-# Module: colors.py
-# Mo ta: He thong mau sac cho console
-# =============================================================================
-"""
-He thong mau sac ANSI cho console Python.
-Ho tro cac theme: LIGHT, DARK, BLUE, GREEN, PURPLE, ORANGE.
-"""
-
 import os
 import sys
 
-# Kiem tra terminal ho tro ANSI color
 _ENABLE_COLORS = sys.stdout.isatty() or os.environ.get('FORCE_COLOR', '')
 
-# ── ANSI Escape Codes ────────────────────────────────────────────────────────
 _RESET = "\033[0m"
 _BOLD = "\033[1m"
 _DIM = "\033[2m"
 _ITALIC = "\033[3m"
 _UNDERLINE = "\033[4m"
 
-# ── Mau chinh ───────────────────────────────────────────────────────────────
 class Colors:
-    """Cac mau co ban."""
-
+    
     BLACK = "\033[30m"
     RED = "\033[31m"
     GREEN = "\033[32m"
@@ -41,10 +28,8 @@ class Colors:
     BRIGHT_CYAN = "\033[96m"
     BRIGHT_WHITE = "\033[97m"
 
-# ── Background Colors ─────────────────────────────────────────────────────────
 class BgColors:
-    """Mau nen."""
-
+    
     BLACK = "\033[40m"
     RED = "\033[41m"
     GREEN = "\033[42m"
@@ -62,224 +47,153 @@ class BgColors:
     BRIGHT_CYAN = "\033[106m"
     BRIGHT_WHITE = "\033[107m"
 
-
 def _color(text, ansi_code):
-    """Ap dung mau neu terminal ho tro."""
-    if not _ENABLE_COLORS:
+        if not _ENABLE_COLORS:
         return text
     return f"{ansi_code}{text}{_RESET}"
 
-
 def _color_bold(text, ansi_code):
-    """Ap dung mau dam neu terminal ho tro."""
-    if not _ENABLE_COLORS:
+        if not _ENABLE_COLORS:
         return text
     return f"{_BOLD}{ansi_code}{text}{_RESET}"
 
-
-# ── Style Functions ─────────────────────────────────────────────────────────
-
 def bold(text):
-    """In dam."""
-    if not _ENABLE_COLORS:
+        if not _ENABLE_COLORS:
         return f"**{text}**"
     return f"{_BOLD}{text}{_RESET}"
 
-
 def dim(text):
-    """In mo."""
-    if not _ENABLE_COLORS:
+        if not _ENABLE_COLORS:
         return text
     return f"{_DIM}{text}{_RESET}"
 
-
 def italic(text):
-    """In nghieng."""
-    if not _ENABLE_COLORS:
+        if not _ENABLE_COLORS:
         return f"_{text}_"
     return f"{_ITALIC}{text}{_RESET}"
 
-
 def underline(text):
-    """In gach chan."""
-    if not _ENABLE_COLORS:
+        if not _ENABLE_COLORS:
         return f"___{text}___"
     return f"{_UNDERLINE}{text}{_RESET}"
-
-
-# ── Primary Colors ───────────────────────────────────────────────────────────
 
 def black(text):
     return _color(text, Colors.BLACK)
 
-
 def red(text):
     return _color(text, Colors.RED)
-
 
 def green(text):
     return _color(text, Colors.GREEN)
 
-
 def yellow(text):
     return _color(text, Colors.YELLOW)
-
 
 def blue(text):
     return _color(text, Colors.BLUE)
 
-
 def magenta(text):
     return _color(text, Colors.MAGENTA)
-
 
 def cyan(text):
     return _color(text, Colors.CYAN)
 
-
 def white(text):
     return _color(text, Colors.WHITE)
-
 
 def gray(text):
     return _color(text, Colors.GRAY)
 
-
 def bright_red(text):
     return _color(text, Colors.BRIGHT_RED)
-
 
 def bright_green(text):
     return _color(text, Colors.BRIGHT_GREEN)
 
-
 def bright_yellow(text):
     return _color(text, Colors.BRIGHT_YELLOW)
-
 
 def bright_blue(text):
     return _color(text, Colors.BRIGHT_BLUE)
 
-
 def bright_magenta(text):
     return _color(text, Colors.BRIGHT_MAGENTA)
-
 
 def bright_cyan(text):
     return _color(text, Colors.BRIGHT_CYAN)
 
-
 def bright_white(text):
     return _color(text, Colors.BRIGHT_WHITE)
-
-
-# ── Bold Colors ──────────────────────────────────────────────────────────────
 
 def red_bold(text):
     return _color_bold(text, Colors.RED)
 
-
 def green_bold(text):
     return _color_bold(text, Colors.GREEN)
-
 
 def yellow_bold(text):
     return _color_bold(text, Colors.YELLOW)
 
-
 def blue_bold(text):
     return _color_bold(text, Colors.BLUE)
-
 
 def cyan_bold(text):
     return _color_bold(text, Colors.CYAN)
 
-
 def magenta_bold(text):
     return _color_bold(text, Colors.MAGENTA)
-
 
 def white_bold(text):
     return _color_bold(text, Colors.WHITE)
 
-
-# ── Background Colors ────────────────────────────────────────────────────────
-
 def bg_red(text):
     return _color(text, BgColors.RED)
-
 
 def bg_green(text):
     return _color(text, BgColors.GREEN)
 
-
 def bg_yellow(text):
     return _color(text, BgColors.YELLOW)
-
 
 def bg_blue(text):
     return _color(text, BgColors.BLUE)
 
-
 def bg_cyan(text):
     return _color(text, BgColors.CYAN)
-
 
 def bg_magenta(text):
     return _color(text, BgColors.MAGENTA)
 
-
-# ── Special Styling ──────────────────────────────────────────────────────────
-
 def success(text):
-    """Mau xanh la - Thanh cong."""
-    return bright_green(text)
-
+        return bright_green(text)
 
 def error(text):
-    """Mau do - Loi."""
-    return bright_red(text)
-
+        return bright_red(text)
 
 def warning(text):
-    """Mau vang - Canh bao."""
-    return bright_yellow(text)
-
+        return bright_yellow(text)
 
 def info(text):
-    """Mau xanh duong - Thong tin."""
-    return bright_cyan(text)
-
+        return bright_cyan(text)
 
 def header(text):
-    """Mau tim dam - Header."""
-    return magenta_bold(text)
-
+        return magenta_bold(text)
 
 def muted(text):
-    """Mau xam - Chua active."""
-    return gray(text)
-
+        return gray(text)
 
 def highlight(text):
-    """Nen vang, chu den - Noi bat."""
-    if not _ENABLE_COLORS:
+        if not _ENABLE_COLORS:
         return f"[{text}]"
     return f"{BgColors.BRIGHT_YELLOW}{_BOLD}{Colors.BLACK}{text}{_RESET}"
 
-
 def box(text):
-    """Nen xanh duong, chu trang - Box."""
-    if not _ENABLE_COLORS:
+        if not _ENABLE_COLORS:
         return f"| {text} |"
     return f"{BgColors.BRIGHT_BLUE}{_BOLD}{Colors.WHITE} {text} {_RESET}"
 
-
-# ── Progress Bar Colors ──────────────────────────────────────────────────────
-
 def progress_bar(current, total, width=20, color=None):
-    """Tao progress bar."""
-    if total == 0:
+        if total == 0:
         return "[░" * width + "]"
 
     filled = int(width * current / total)
@@ -296,13 +210,8 @@ def progress_bar(current, total, width=20, color=None):
 
     return f"[{bar}] {current}/{total}"
 
-
-# ── Theme Definitions ─────────────────────────────────────────────────────────
-
 class Theme:
-    """Dinh nghia theme cho UI."""
-
-    # Theme MacOS-like (Blue primary)
+    
     MAC = {
         "primary": Colors.BRIGHT_BLUE,
         "secondary": Colors.CYAN,
@@ -316,7 +225,6 @@ class Theme:
         "bg_secondary": BgColors.BRIGHT_BLUE,
     }
 
-    # Theme Forest (Green primary)
     FOREST = {
         "primary": Colors.BRIGHT_GREEN,
         "secondary": Colors.GREEN,
@@ -330,7 +238,6 @@ class Theme:
         "bg_secondary": BgColors.BRIGHT_GREEN,
     }
 
-    # Theme Sunset (Orange primary)
     SUNSET = {
         "primary": Colors.BRIGHT_YELLOW,
         "secondary": Colors.YELLOW,
@@ -344,18 +251,12 @@ class Theme:
         "bg_secondary": BgColors.BRIGHT_YELLOW,
     }
 
-    # Default theme
     DEFAULT = MAC
-
-
-# ── Theme Manager ────────────────────────────────────────────────────────────
 
 _current_theme = Theme.DEFAULT
 
-
 def set_theme(theme_name="MAC"):
-    """Dat theme hien tai."""
-    global _current_theme
+        global _current_theme
     if theme_name.upper() == "MAC":
         _current_theme = Theme.MAC
     elif theme_name.upper() == "FOREST":
@@ -365,31 +266,20 @@ def set_theme(theme_name="MAC"):
     else:
         _current_theme = Theme.DEFAULT
 
-
 def get_theme():
-    """Lay theme hien tai."""
-    return _current_theme
-
+        return _current_theme
 
 def _theme(key, text):
-    """Ap dung mau tu theme (internal)."""
-    if not _ENABLE_COLORS:
+        if not _ENABLE_COLORS:
         return text
     code = _current_theme.get(key, Colors.WHITE)
     return f"{code}{text}{_RESET}"
 
-
 def theme_color(key, text):
-    """Ap dung mau tu theme."""
-    return _theme(key, text)
-
-
-# ── Icons (Unicode) ───────────────────────────────────────────────────────────
+        return _theme(key, text)
 
 class Icons:
-    """Cac bieu tuong dung trong UI."""
-
-    # Actions
+    
     ADD = "+"
     EDIT = "~"
     DELETE = "x"
@@ -404,14 +294,12 @@ class Icons:
     STAR = "*"
     HEART = "+"
 
-    # Status
     SUCCESS = "[OK]"
     WARNING = "[!]"
     ERROR = "[X]"
     INFO = "[i]"
     LOADING = "..."
 
-    # Data
     USER = "@"
     USERS = "@@"
     MANAGER = "[M]"
@@ -426,7 +314,6 @@ class Icons:
     LOCATION = "*"
     GEAR = "+"
 
-    # Decorative
     DOT = "."
     LINE = "-"
     DASH = "~"
@@ -437,28 +324,17 @@ class Icons:
     BULLET = "o"
     DIAMOND = "<>"
 
-    # Medals
     GOLD = "1st"
     SILVER = "2nd"
     BRONZE = "3rd"
 
-
-# ── Disable Colors (for non-TTY) ─────────────────────────────────────────────
-
 def no_color():
-    """Tat mau sac."""
-    global _ENABLE_COLORS
+        global _ENABLE_COLORS
     _ENABLE_COLORS = False
 
-
 def force_color():
-    """Bat mau sac bat ke terminal."""
-    global _ENABLE_COLORS
+        global _ENABLE_COLORS
     _ENABLE_COLORS = True
 
-
-# ── ASCII Art Helpers ─────────────────────────────────────────────────────────
-
 def gradient_bar(text, steps=10):
-    """Tao gradient bar don gian."""
-    return bright_cyan("|" + "█" * steps + "|") + f" {text}"
+        return bright_cyan("|" + "█" * steps + "|") + f" {text}"
